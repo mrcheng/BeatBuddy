@@ -12,7 +12,7 @@
   <meta property="og:image" content="https://mrcheng.github.io/BeatBuddy/icon.png?v=e20e10269846">
   <link rel="canonical" href="https://mrcheng.github.io/BeatBuddy/">
   <link rel="icon" href="icon.png?v=e20e10269846" type="image/png">
-  <link rel="stylesheet" href="style.css?v=e72511ecb625">
+  <link rel="stylesheet" href="style.css?v=7028802a359e">
   <title>BPM Buddy — music tempo on your wrist</title>
 </head>
 <body>
@@ -31,7 +31,6 @@
     <div class="availability"><span class="badge">Coming to the App Store</span><span>Free. No ads. No account.</span></div>
   </div>
   <div class="hero-dial">
-    <input class="hero-motion-toggle hero-pause-toggle" type="checkbox" id="pause-ring" aria-label="Pause ring animation">
     <svg class="hero-icon" viewBox="0 0 1024 1024" role="img" aria-label="BPM Buddy: fixed rainbow pixels with a moving light trail around BPM">
       <defs>
         <mask id="ring-light" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024" style="mask-type:alpha">
@@ -42,11 +41,6 @@
       <image class="hero-ring" href="icon.png?v=e20e10269846" width="1024" height="1024" mask="url(#ring-light)"/>
       <image class="hero-face" href="icon.png?v=e20e10269846" width="1024" height="1024" clip-path="url(#dial-face)"/>
     </svg>
-    <label class="hero-motion-control hero-pause-control" for="pause-ring">
-      <svg class="motion-pause" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M4 3h3v10H4zm5 0h3v10H9z"/></svg>
-      <svg class="motion-resume" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="m5 2 9 6-9 6z"/></svg>
-      <span class="motion-pause">Pause animation</span><span class="motion-resume">Resume animation</span>
-    </label>
   </div>
 </section>
 <section class="app-preview" aria-labelledby="preview-title">
