@@ -8,9 +8,19 @@
 .hero-motion-control:hover{color:var(--accent);border-color:#68614d}
 .hero-motion-toggle:focus-visible~.hero-motion-control{outline:2px solid var(--accent);outline-offset:4px}
 .motion-resume{display:none}
-.hero-motion-toggle:checked~.hero-icon .hero-ring{animation-play-state:paused}
-.hero-motion-toggle:checked~.hero-motion-control .motion-pause{display:none}
-.hero-motion-toggle:checked~.hero-motion-control .motion-resume{display:inline}
-@media(prefers-reduced-motion:reduce){.hero-ring{animation:none;will-change:auto}.hero-motion-toggle,.hero-motion-control{display:none}}
+.hero-pause-toggle:checked~.hero-icon .hero-ring{animation-play-state:paused}
+.hero-pause-toggle:checked~.hero-pause-control .motion-pause{display:none}
+.hero-pause-toggle:checked~.hero-pause-control .motion-resume{display:inline}
+.hero-play-toggle,.hero-play-control{display:none}
+.hero-play-control .motion-pause{display:none}
+.hero-play-control .motion-resume{display:inline}
+@media(prefers-reduced-motion:reduce){
+.hero-ring{animation:none;will-change:auto}
+.hero-pause-toggle,.hero-pause-control{display:none}
+.hero-play-toggle{display:block}.hero-play-control{display:inline-flex}
+.hero-play-toggle:checked~.hero-icon .hero-ring{animation:hero-orbit 2s linear infinite;will-change:transform}
+.hero-play-toggle:checked~.hero-play-control .motion-resume{display:none}
+.hero-play-toggle:checked~.hero-play-control .motion-pause{display:inline}
+}
 @media(max-width:950px){.shell{padding:0 36px}.hero{gap:28px}.hero h1{font-size:57px}.app-preview{gap:40px}.site-footer{flex-direction:column;gap:18px}.site-footer nav{gap:12px 24px}}
 @media(max-width:650px){.shell{padding:0 24px}.site-header{padding:21px 0}.brand{font-size:17px;gap:9px}.brand img{width:33px;height:33px}.byline{font-size:9px}.byline span{margin-left:3px}.hero{grid-template-columns:1fr;gap:32px;padding:48px 0}.hero h1{font-size:clamp(49px,10vw,67px)}.lead{font-size:23px}.intro{max-width:400px;font-size:14px}.hero-dial{max-width:275px}.eyebrow{font-size:9px}.availability{flex-direction:row;align-items:center;flex-wrap:wrap;font-size:10px}.badge{font-size:11px}.app-preview{grid-template-columns:1fr;gap:34px;padding:43px 0 47px}h2{font-size:39px}.preview-copy>p:not(.eyebrow){max-width:400px;font-size:14px}.screenshots{gap:0 14px;max-width:440px;width:100%;margin:auto}.screenshots img{border-radius:23px}.capture-note{font-size:9px}.site-footer{padding:25px 0;gap:17px}.site-footer nav{gap:12px 21px}.document{margin:43px auto 55px}.document h1{font-size:43px}.document h2{font-size:22px}.document p,.document li{font-size:14px}}
